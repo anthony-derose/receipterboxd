@@ -1,0 +1,96 @@
+2022-09-22 03:24:36.535 EDT [88102] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-22 03:24:36.537 EDT [88102] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-22 03:24:36.537 EDT [88102] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-22 03:24:36.538 EDT [88102] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-22 03:24:36.543 EDT [88103] LOG:  database system was shut down at 2022-09-22 03:24:36 EDT
+2022-09-22 03:24:36.553 EDT [88102] LOG:  database system is ready to accept connections
+2022-09-22 11:24:31.610 EDT [88102] LOG:  received fast shutdown request
+2022-09-22 11:24:31.613 EDT [88102] LOG:  aborting any active transactions
+2022-09-22 11:24:31.617 EDT [88102] LOG:  background worker "logical replication launcher" (PID 88109) exited with exit code 1
+2022-09-22 11:24:31.618 EDT [88104] LOG:  shutting down
+2022-09-22 11:24:31.642 EDT [88102] LOG:  database system is shut down
+2022-09-22 13:07:53.318 EDT [89968] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-22 13:07:53.321 EDT [89968] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-22 13:07:53.321 EDT [89968] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-22 13:07:53.321 EDT [89968] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-22 13:07:53.333 EDT [89969] LOG:  database system was shut down at 2022-09-22 11:24:31 EDT
+2022-09-22 13:07:53.339 EDT [89968] LOG:  database system is ready to accept connections
+2022-09-22 18:41:20.225 EDT [89968] LOG:  received fast shutdown request
+2022-09-22 18:41:20.226 EDT [89968] LOG:  aborting any active transactions
+2022-09-22 18:41:20.228 EDT [89968] LOG:  background worker "logical replication launcher" (PID 89975) exited with exit code 1
+2022-09-22 18:41:20.228 EDT [89970] LOG:  shutting down
+2022-09-22 18:41:20.241 EDT [89968] LOG:  database system is shut down
+2022-09-23 03:32:53.700 EDT [92164] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-23 03:32:53.710 EDT [92164] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-23 03:32:53.710 EDT [92164] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-23 03:32:53.712 EDT [92164] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-23 03:32:53.729 EDT [92165] LOG:  database system was shut down at 2022-09-22 18:41:20 EDT
+2022-09-23 03:32:53.738 EDT [92164] LOG:  database system is ready to accept connections
+2022-09-23 04:07:15.981 EDT [92571] ERROR:  syntax error at end of input at character 74
+2022-09-23 04:07:15.981 EDT [92571] STATEMENT:  CREATE TABLE users (id serial PRIMARY KEY,username varchar (50) NOT NULL,
+2022-09-23 04:08:36.680 EDT [92595] ERROR:  syntax error at or near ";" at character 73
+2022-09-23 04:08:36.680 EDT [92595] STATEMENT:  CREATE TABLE users (id serial PRIMARY KEY,username varchar (50) NOT NULL;
+2022-09-23 04:11:51.710 EDT [92668] ERROR:  syntax error at or near "{" at character 37
+2022-09-23 04:11:51.710 EDT [92668] STATEMENT:  INSERT INTO users (username)VALUES ({s})
+2022-09-23 04:14:20.541 EDT [92725] ERROR:  column "anteezy" does not exist at character 37
+2022-09-23 04:14:20.541 EDT [92725] STATEMENT:  INSERT INTO users (username)VALUES (anteezy)
+2022-09-23 04:16:47.298 EDT [92787] ERROR:  syntax error at or near "%" at character 37
+2022-09-23 04:16:47.298 EDT [92787] STATEMENT:  INSERT INTO users (username)VALUES (%s)
+2022-09-23 04:19:57.318 EDT [92855] ERROR:  column "anteezy" does not exist at character 37
+2022-09-23 04:19:57.318 EDT [92855] STATEMENT:  INSERT INTO users (username)VALUES (anteezy)
+2022-09-23 14:24:15.207 EDT [93583] FATAL:  database "receiterboxd+db" does not exist
+2022-09-23 14:25:09.333 EDT [93589] ERROR:  syntax error at or near "clear" at character 1
+2022-09-23 14:25:09.333 EDT [93589] STATEMENT:  clear
+	DELETE title, author FROM books;
+2022-09-23 14:25:18.626 EDT [93589] ERROR:  syntax error at or near "clear" at character 1
+2022-09-23 14:25:18.626 EDT [93589] STATEMENT:  clear
+	REMOVE title, author FROM books;
+2022-09-23 14:25:27.243 EDT [93589] ERROR:  syntax error at or near "title" at character 8
+2022-09-23 14:25:27.243 EDT [93589] STATEMENT:  DELETE title, author FROM books;
+2022-09-23 14:25:33.521 EDT [93589] ERROR:  syntax error at or near "REMOVE" at character 1
+2022-09-23 14:25:33.521 EDT [93589] STATEMENT:  REMOVE title, author FROM books;
+2022-09-23 14:27:03.059 EDT [93654] ERROR:  syntax error at or near "REMOVE" at character 31
+2022-09-23 14:27:03.059 EDT [93654] STATEMENT:  DROP DATABASE receiterboxd_db
+	REMOVE title, author FROM books;
+2022-09-23 14:28:53.019 EDT [93690] ERROR:  syntax error at or near "DROP" at character 31
+2022-09-23 14:28:53.019 EDT [93690] STATEMENT:  DROP DATABASE receiterboxd_db
+	DROP DATABASE receiterboxd_db
+	DROP DATABASE receiterboxd_db;
+2022-09-23 14:29:37.059 EDT [93690] ERROR:  syntax error at or near "[" at character 15
+2022-09-23 14:29:37.059 EDT [93690] STATEMENT:  DROP DATABASE [IF EXISTS] database_name;
+2022-09-23 14:29:38.522 EDT [93690] ERROR:  syntax error at or near "[" at character 15
+2022-09-23 14:29:38.522 EDT [93690] STATEMENT:  DROP DATABASE [IF EXISTS] database_name;
+2022-09-23 14:30:00.640 EDT [93690] ERROR:  syntax error at or near "/" at character 1
+2022-09-23 14:30:00.640 EDT [93690] STATEMENT:  /;
+2022-09-23 14:32:36.631 EDT [93690] ERROR:  syntax error at or near "/" at character 1
+2022-09-23 14:32:36.631 EDT [93690] STATEMENT:  /l
+	l
+	CREATE DATABASE my_db;
+2022-09-23 14:33:04.422 EDT [93690] ERROR:  role "anthony" already exists
+2022-09-23 14:33:04.422 EDT [93690] STATEMENT:  CREATE USER anthony WITH PASSWORD 'antoine';
+2022-09-23 14:33:22.539 EDT [93690] ERROR:  database "flask_db" does not exist
+2022-09-23 14:33:22.539 EDT [93690] STATEMENT:  GRANT ALL PRIVILEGES ON DATABASE flask_db TO anthony;
+2022-09-23 14:36:08.491 EDT [93869] FATAL:  database "receiterboxd_db" does not exist
+2022-09-23 14:36:21.096 EDT [93880] ERROR:  syntax error at or near ";" at character 74
+2022-09-23 14:36:21.096 EDT [93880] STATEMENT:  CREATE TABLE users (id serial PRIMARY KEY,username varchar (50) NOT NULL,;
+2022-09-23 20:09:47.108 EDT [95537] FATAL:  database "receiterboxd_db" does not exist
+2022-09-23 21:00:30.562 EDT [96240] ERROR:  syntax error at or near "username" at character 8
+2022-09-23 21:00:30.562 EDT [96240] STATEMENT:  INSERT username FROM users;VALUES('fcknhyd')
+2022-09-23 21:02:01.444 EDT [96278] ERROR:  syntax error at or near ";" at character 18
+2022-09-23 21:02:01.444 EDT [96278] STATEMENT:  INSERT INTO users;VALUES('fcknhyd')
+2022-09-23 21:07:45.560 EDT [96453] ERROR:  duplicate key value violates unique constraint "users_username_key"
+2022-09-23 21:07:45.560 EDT [96453] DETAIL:  Key (username)=(fcknhyd) already exists.
+2022-09-23 21:07:45.560 EDT [96453] STATEMENT:  INSERT INTO users (username)VALUES ('fcknhyd')
+2022-09-23 21:10:02.402 EDT [96496] ERROR:  duplicate key value violates unique constraint "users_username_key"
+2022-09-23 21:10:02.402 EDT [96496] DETAIL:  Key (username)=(fcknhyd) already exists.
+2022-09-23 21:10:02.402 EDT [96496] STATEMENT:  INSERT INTO users (username)VALUES ('fcknhyd')
+2022-09-23 22:09:43.516 EDT [92164] LOG:  received smart shutdown request
+2022-09-23 22:09:43.520 EDT [92164] LOG:  background worker "logical replication launcher" (PID 92171) exited with exit code 1
+2022-09-23 22:09:43.521 EDT [92166] LOG:  shutting down
+2022-09-23 22:09:43.536 EDT [92164] LOG:  database system is shut down
+2022-09-23 23:30:24.401 EDT [974] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-23 23:30:24.404 EDT [974] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-23 23:30:24.404 EDT [974] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-23 23:30:24.405 EDT [974] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-23 23:30:24.414 EDT [975] LOG:  database system was shut down at 2022-09-23 22:09:43 EDT
+2022-09-23 23:30:24.423 EDT [974] LOG:  database system is ready to accept connections

@@ -8,8 +8,25 @@ flask = "*"
 gunicorn = "*"
 flask-cors = "*"
 flask-restful = "*"
+requests = "*"
+pytest = "*"
+conda = "*"
+numpy = "*"
+pandas = "*"
+lxml = "*"
+psycopg2 = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-script = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.9.13"
+
+[scripts]
+start = "python app.py && python --version" 
+shell = "python"
+dbinit = "python init_db.py"
+
