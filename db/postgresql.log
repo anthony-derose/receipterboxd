@@ -94,3 +94,29 @@
 2022-09-23 23:30:24.405 EDT [974] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2022-09-23 23:30:24.414 EDT [975] LOG:  database system was shut down at 2022-09-23 22:09:43 EDT
 2022-09-23 23:30:24.423 EDT [974] LOG:  database system is ready to accept connections
+2022-09-24 17:22:26.834 EDT [974] LOG:  received fast shutdown request
+2022-09-24 17:22:26.836 EDT [974] LOG:  aborting any active transactions
+2022-09-24 17:22:26.838 EDT [974] LOG:  background worker "logical replication launcher" (PID 981) exited with exit code 1
+2022-09-24 17:22:26.838 EDT [1144] FATAL:  terminating connection due to administrator command
+2022-09-24 17:22:26.841 EDT [976] LOG:  shutting down
+2022-09-24 17:22:26.909 EDT [974] LOG:  database system is shut down
+2022-09-24 20:04:10.032 EDT [4001] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-24 20:04:10.034 EDT [4001] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-24 20:04:10.034 EDT [4001] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-24 20:04:10.034 EDT [4001] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-24 20:04:10.043 EDT [4002] LOG:  database system was shut down at 2022-09-24 17:22:26 EDT
+2022-09-24 20:04:10.050 EDT [4001] LOG:  database system is ready to accept connections
+2022-09-24 20:04:11.631 EDT [4001] LOG:  received fast shutdown request
+2022-09-24 20:04:11.632 EDT [4001] LOG:  aborting any active transactions
+2022-09-24 20:04:11.634 EDT [4001] LOG:  background worker "logical replication launcher" (PID 4008) exited with exit code 1
+2022-09-24 20:04:11.635 EDT [4003] LOG:  shutting down
+2022-09-24 20:04:11.648 EDT [4001] LOG:  database system is shut down
+2022-09-24 23:07:25.622 EDT [4854] LOG:  starting PostgreSQL 14.5 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-09-24 23:07:25.624 EDT [4854] LOG:  listening on IPv6 address "::1", port 5432
+2022-09-24 23:07:25.625 EDT [4854] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-24 23:07:25.625 EDT [4854] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-24 23:07:25.637 EDT [4855] LOG:  database system was shut down at 2022-09-24 20:04:11 EDT
+2022-09-24 23:07:25.643 EDT [4854] LOG:  database system is ready to accept connections
+2022-09-25 02:45:23.527 EDT [6768] ERROR:  duplicate key value violates unique constraint "users_username_key"
+2022-09-25 02:45:23.527 EDT [6768] DETAIL:  Key (username)=(anteezy) already exists.
+2022-09-25 02:45:23.527 EDT [6768] STATEMENT:  INSERT INTO users (username)VALUES ('anteezy')

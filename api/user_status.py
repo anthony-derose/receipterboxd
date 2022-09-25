@@ -9,7 +9,7 @@ class user_status(Resource):
     r = requests.get(url)
     status = r.status_code
     
-    json_response = {
-        'userestatus': status 
-    }
-    return json_response
+    if status == 200:
+      return {'userestatus': status }, 200
+    elif status == 404:
+      return {'userestatus': status }, 404
