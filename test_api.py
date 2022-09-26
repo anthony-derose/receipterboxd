@@ -1,5 +1,4 @@
 from app import app 
-import json 
 
 def test_user_status_200():
     response_200 = app.test_client().get('/user_status/anteezy')

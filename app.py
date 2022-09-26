@@ -17,6 +17,16 @@ api = Api(app)
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
+
+@app.route("/about", defaults={'path':''})
+def about(path):
+    return send_from_directory(app.static_folder,'index.html')
+
+
+@app.route("/contact", defaults={'path':''})
+def contact(path):
+    return send_from_directory(app.static_folder,'index.html')
+
 api.add_resource(user_status, '/user_status/<string:username>')
 api.add_resource(receipt, '/receipt/<string:username>')
 api.add_resource(User, '/user/<string:username>')

@@ -1,0 +1,183 @@
+.posRight {
+    margin-left: 70%;
+}
+
+@font-face {
+    font-family: merchantcopydoublesize;
+    src: url('./MerchantCopyDoublesize.ttf');
+  }
+
+.merchant-font {
+    font-family: 'merchantcopydoublesize';
+    font-weight: bold;
+}
+
+.h1-mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 250%;
+}
+
+.h2-mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 150%; 
+    padding-bottom: 2%;
+    font-family: 'merchantcopydoublesize';
+    font-weight: bold;
+}
+
+
+.form-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+}
+
+.button-style {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 48%;
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.receipt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.content1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+}
+
+.h1-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 250%;
+}
+
+
+.receipt-image {
+    display: inline-block;
+    height: 600px;
+    width: 100%;
+}
+.receipt-overall {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 40%;
+}
+
+.receipt-top {
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.receipt-table {
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    mix-blend-mode: multiply;
+}
+
+.amt {
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+    font-weight: bold;
+    float: right;
+}
+
+.receipt-title {
+    text-align: center;
+    font-family: 'merchantcopydoublesize';
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+.user-data {
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.user-films {
+    flex: 1;
+}
+
+.user-data div+div {
+    padding-left: 10px;
+}
+
+.total {
+    font-family: 'merchantcopydoublesize';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.total-amt {
+    font-family: 'merchantcopydoublesize';
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+}
+
+.thank-you {
+    text-align: center;
+}
+
+.users-grid {
+    column-count: 5;
+    max-width: 960px;
+    margin: auto; 
+    text-align: center;
+    font-family: 'merchantcopydoublesize';
+    font-size: 11px;
+}
+
+.recent {
+    margin: auto; 
+    text-align: center;
+    font-family: 'merchantcopydoublesize';
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.users-grid a {
+    color: black;
+}

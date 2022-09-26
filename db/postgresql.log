@@ -120,3 +120,8 @@
 2022-09-25 02:45:23.527 EDT [6768] ERROR:  duplicate key value violates unique constraint "users_username_key"
 2022-09-25 02:45:23.527 EDT [6768] DETAIL:  Key (username)=(anteezy) already exists.
 2022-09-25 02:45:23.527 EDT [6768] STATEMENT:  INSERT INTO users (username)VALUES ('anteezy')
+2022-09-25 19:33:49.084 EDT [4854] LOG:  received fast shutdown request
+2022-09-25 19:33:49.104 EDT [4854] LOG:  aborting any active transactions
+2022-09-25 19:33:49.107 EDT [4854] LOG:  background worker "logical replication launcher" (PID 4861) exited with exit code 1
+2022-09-25 19:33:49.108 EDT [4856] LOG:  shutting down
+2022-09-25 19:33:49.122 EDT [4854] LOG:  database system is shut down

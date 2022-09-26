@@ -1,7 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
+
+import NavbarElements from './components/NavbarElements';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+import Home from './pages';
+import Receipt from './pages/receipt'
+import About from './pages/about'
+import Contact from './pages/contact'
 
 function App() {
   const [getMessage, setGetMessage] = useState({})
@@ -17,14 +23,16 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>React + Flask Tutorial</p>
-        <div>{getMessage.status === 200 ? 
-          <h3>{getMessage.data.message}</h3>
-          :
-          <h3>LOADING</h3>}</div>
-      </header>
+      <Router>
+          <NavbarElements/>
+          
+          <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/receipt/:id' element={<Receipt />}/>
+              <Route exact path='/about' element={<About />} />
+              <Route exact path='/contact' element={<Contact />} />
+          </Routes>
+        </Router>
     </div>
   );
 }
