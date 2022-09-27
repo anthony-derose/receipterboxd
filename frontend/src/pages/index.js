@@ -32,6 +32,7 @@ function Home() {
                 })
                 .then((response) => {
                     const res = response;
+                    console.log(res.data)
                     setUserlist(res.data)
                 }
                 ).catch((error) => {

@@ -141,3 +141,9 @@
 2022-09-26 23:36:48.375 EDT [18990] ERROR:  syntax error at or near "SELECT" at character 28
 2022-09-26 23:36:48.375 EDT [18990] STATEMENT:  SELECT username FROM users
 	SELECT username FROM users;
+2022-09-27 01:50:08.062 EDT [18032] LOG:  received fast shutdown request
+2022-09-27 01:50:08.078 EDT [18032] LOG:  aborting any active transactions
+2022-09-27 01:50:08.082 EDT [18032] LOG:  background worker "logical replication launcher" (PID 18039) exited with exit code 1
+2022-09-27 01:50:08.081 EDT [18990] FATAL:  terminating connection due to administrator command
+2022-09-27 01:50:08.102 EDT [18034] LOG:  shutting down
+2022-09-27 01:50:08.161 EDT [18032] LOG:  database system is shut down
