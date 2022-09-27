@@ -70,7 +70,7 @@ function Home() {
                     })
                     */
 
-                    //navigate(`/receipt/${state.username}`, { state: { navName: state.username } });
+                    navigate(`/receipt/${state.username}`, { state: { navName: state.username } });
                     console.log(state.username)
                 }
             })

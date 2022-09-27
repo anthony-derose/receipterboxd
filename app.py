@@ -28,7 +28,7 @@ def contact(path):
     return send_from_directory(app.static_folder,'index.html')
 
 api.add_resource(user_status, '/user_status/<string:username>')
-api.add_resource(receipt, '/receipt/<string:username>')
+api.add_resource(receipt, '/receipt_scrape/<string:username>')
 api.add_resource(User, '/user/<string:username>')
 api.add_resource(user_list, '/user_list')
 
