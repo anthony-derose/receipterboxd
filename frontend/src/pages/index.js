@@ -56,10 +56,10 @@ function Home() {
                 const userestatus = response.data.userestatus;
                 if (userestatus == '200') {
 
-                    /*
+                    
                     axios({
                         method: 'POST',
-                        url: `add_user/${state.username}`,
+                        url: `user/${state.username}`,
                         params: { 'username': state.username }
                     }).catch((error) => {
                         if (error.response) {
@@ -68,7 +68,7 @@ function Home() {
                             console.log(error.response.headers)
                         }
                     })
-                    */
+                    
 
                     navigate(`/receipt/${state.username}`, { state: { navName: state.username } });
                     console.log(state.username)

@@ -131,3 +131,13 @@
 2022-09-26 21:51:00.327 EDT [18032] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
 2022-09-26 21:51:00.340 EDT [18033] LOG:  database system was shut down at 2022-09-25 19:33:49 EDT
 2022-09-26 21:51:00.347 EDT [18032] LOG:  database system is ready to accept connections
+2022-09-26 23:35:05.820 EDT [18974] FATAL:  database "receiterboxd" does not exist
+2022-09-26 23:36:43.842 EDT [18990] ERROR:  syntax error at or near "/" at character 1
+2022-09-26 23:36:43.842 EDT [18990] STATEMENT:  /c receiterboxd
+	/l
+	help
+	SELECT username FROM users
+	SELECT username FROM users;
+2022-09-26 23:36:48.375 EDT [18990] ERROR:  syntax error at or near "SELECT" at character 28
+2022-09-26 23:36:48.375 EDT [18990] STATEMENT:  SELECT username FROM users
+	SELECT username FROM users;
