@@ -22,7 +22,7 @@ function Home() {
 
     const navigate = useNavigate();
 
-    /*
+    
     useEffect(() => {
         function userList() {
             axios
@@ -44,7 +44,7 @@ function Home() {
         }
         userList();
     }, []); 
-    */
+    
     function status() {
         axios
             ({
@@ -115,6 +115,25 @@ function Home() {
 
                     </InputGroup>
                 </form>
+            </div>
+
+            <div className='recent'>
+                Recent Users 
+            </div>
+
+            <div className='users-grid'>
+                {
+                    usersList && <div>
+                        {usersList.map(item =>
+                        <div>
+                         <Link
+                            to={`/receipt/${item.username}`} state={{ navName: item.username }}
+                        >{item.username}
+                        </Link>
+                        </div>
+                        )}
+                    </div>
+                }
             </div>
 
         </div>
