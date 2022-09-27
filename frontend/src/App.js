@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Router>
           <NavbarElements/>
-          
+
           <Routes>
               <Route exact path='/' element={<Home />} />
               <Route path='/receipt/:id' element={<Receipt />}/>

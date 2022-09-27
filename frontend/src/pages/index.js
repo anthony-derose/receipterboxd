@@ -44,18 +44,19 @@ function Home() {
         }
         userList();
     }, []); 
-
+    */
     function status() {
         axios
             ({
                 method: 'GET',
-                url: `/verify_user/${state.username}`,
+                url: `/user_status/${state.username}`,
                 params: { 'username': state.username }
             })
             .then((response) => {
                 const userestatus = response.data.userestatus;
                 if (userestatus == '200') {
 
+                    /*
                     axios({
                         method: 'POST',
                         url: `add_user/${state.username}`,
@@ -67,8 +68,10 @@ function Home() {
                             console.log(error.response.headers)
                         }
                     })
+                    */
 
-                    navigate(`/receipt/${state.username}`, { state: { navName: state.username } });
+                    //navigate(`/receipt/${state.username}`, { state: { navName: state.username } });
+                    console.log(state.username)
                 }
             })
             .catch((error) => {
@@ -80,6 +83,7 @@ function Home() {
             })
     }
     
+
     const onSubmit = (d) => {
         d.username = d.username.replace(/\s+/g, '')
         if (d.username == '') {
@@ -87,16 +91,30 @@ function Home() {
         }
         else {
             state.username = d.username
-            //status();
+            status();
         }
     }
-    */
 
     return (
         <div>
             <div className='merchant-font'>
                 <h1 className='h1-mid'>Receipterboxd</h1>
                 <h2 className='h2-mid'>Generate Your Top Movies!</h2>
+            </div>
+
+            <div className='form-center'>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <InputGroup className="mb-3">
+                        <Form.Control
+                            placeholder="Letterboxd username"
+                            aria-label="Letterboxd username"
+                            aria-describedby="basic-addon2"
+                            {...register("username")}
+                        />
+                        <Button type='submit' variant="success" id="button-addon2"> Submit</Button>
+
+                    </InputGroup>
+                </form>
             </div>
 
         </div>
