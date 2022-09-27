@@ -10,6 +10,8 @@ import { useParams } from 'react-router-dom';
 
 import domtoimage from 'dom-to-image';
 
+import receiptImage from '../receipt_edited2.png';
+
 // TODO
 // RESPONSIVE DESIGN
 
@@ -50,11 +52,73 @@ function Receipt() {
         console.log(el);
       },  [profileData]); 
   
+    function downloadImage() {
+        domtoimage.toJpeg(document.getElementById('my-receipt'), { quality: 0.95 })
+        .then(function (dataUrl) {
+            var link = document.createElement('a');
+            link.download = 'my-receipt.jpeg';
+            link.href = dataUrl;
+            link.click()
+          })
+      }
+
     return (
-        <div className='merchant-font'>
-            Hello!
+        <div>
+            <div className='merchant-font'>
+                <h1 className='h1-mid'>Receipterboxd</h1>
+                <h2 className='h2-mid'>Generate Your Top Movies!</h2>
+            </div>
+
+            <div className='receipt-overall' id='my-receipt'>
+
+            <img src={receiptImage} alt="receipt" className='receipt-image'/>
+
+            <div className='receipt-table'>
+
+                <div className='receipt-title'>
+                {state.navName}
+                </div>
+
+                <div className='receipt-top'>
+                ---------------------------------------------------------------<br/>
+                QTY ITEM <span className='amt'>AMT</span> <br/>
+                ---------------------------------------------------------------
+                </div>
+
+                {profileData && <div>
+                {profileData.top10.map((film, i) => <div className='user-data' key={i}>
+                <div>{('00'+(i+1)).slice(-2)}</div>
+                <div className='user-films'>{film.film}</div>
+                <div>{film.rating.toFixed(2)}</div>
+                </div>)}
+                </div>  
+                }
+                <div className='receipt-top'>
+                ---------------------------------------------------------------<br/>
+                ITEM COUNT: <span className='amt'>10.00</span>
+                <div className='total'>TOTAL: 
+                <span className='total-amt'>{profileData && profileData.top10.reduce( (sum, current) => (sum+current.rating), 0.0).toFixed(2)}</span>
+                </div>
+                ---------------------------------------------------------------
+
+                <div className='receipt-top'>
+                    ACCT NUM: XXXXXXXXXXXX1234	<br/>
+                    AUTH CODE: 5678910	<br/> 
+                    CARDHOLDER:	        <span className='amt'>{state.navName}</span> <br/>
+                    DATE:	        <span className='amt'>{date}</span> 
+                    <div className='thank-you'> THANK YOU FOR VISITING!</div> 
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <button className='button-style' onClick={downloadImage}>
+                Download 
+            </button>
         </div>
-    );
+        );
 }; 
 
 export default Receipt; 
