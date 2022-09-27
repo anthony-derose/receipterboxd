@@ -2,10 +2,11 @@ import os
 import psycopg2
 
 conn = psycopg2.connect(
+        host="localhost",
         database="d7gro9lm48k1ee",
         user='qvurpggflbstyh',
         password='7cd16cffef1204303b0250d7a28d45074dea93c0371dcf37684771fc3d796f0d',
-        sslmode='require')
+        )
 
 # Open a cursor to perform database operations
 cur = conn.cursor()
