@@ -21,8 +21,4 @@ class user_list(Resource):
     cur.close()
     conn.close()
     
-    users = []
-    for i in users_fromdb:
-      users.append(i[0]) 
-    
-    return { 'users' : users}
+    return { 'users' : users_fromdb}
