@@ -43,9 +43,8 @@ function Home() {
                 })
         }
         userList();
-        console.log(usersList)
     }, []); 
-    
+
     function status() {
         axios
             ({
@@ -121,11 +120,11 @@ function Home() {
             <div className='recent'>
                 Recent Users 
             </div>
-
+        
             <div className='users-grid'>
                 {
                     usersList && <div>
-                        {usersList.map(item =>
+                        {usersList.users.map(item =>
                         <div>
                          <Link
                             to={`/receipt/${item.username}`} state={{ navName: item.username }}
@@ -136,7 +135,7 @@ function Home() {
                     </div>
                 }
             </div>
-
+            
         </div>
     );
 };
