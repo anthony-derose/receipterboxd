@@ -95,6 +95,8 @@ function Home() {
         }
     }
 
+    console.log(usersList)
+
     return (
         <div>
             <div className='merchant-font'>
@@ -124,14 +126,16 @@ function Home() {
             <div className='users-grid'>
                 {
                     usersList && <div>
-                        {usersList.users.map(item =>
-                        <div>
-                         <Link
-                            to={`/receipt/${item.username}`} state={{ navName: item.username }}
-                        >{item.username}
-                        </Link>
-                        </div>
-                        )}
+                        {
+                            usersList.users.map(item =>
+                                <div>
+                                    <Link
+                                        to={`/receipt/${item}`} state={{ navName: item }}
+                                    >{item}
+                                    </Link>
+                                </div>
+                            )                        
+                        }
                     </div>
                 }
             </div>
