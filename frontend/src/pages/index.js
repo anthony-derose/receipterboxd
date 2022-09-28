@@ -28,7 +28,7 @@ function Home() {
             axios
                 ({
                     method: 'GET',
-                    url: `/users_list`,
+                    url: `/user_list`,
                 })
                 .then((response) => {
                     const res = response;
