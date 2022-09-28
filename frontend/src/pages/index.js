@@ -95,8 +95,6 @@ function Home() {
         }
     }
 
-    console.log(usersList)
-
     return (
         <div>
             <div className='merchant-font'>

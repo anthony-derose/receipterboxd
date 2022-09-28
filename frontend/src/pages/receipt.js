@@ -37,7 +37,7 @@ function Receipt() {
                   top10 : res.top10
               }))
               }
-              console.log(profileData.top10)
+              //console.log(profileData.top10)
   
           }).catch((error) => {
             if (error.response) {
@@ -49,7 +49,7 @@ function Receipt() {
   
         getRecieptJSON(state.navName); 
         const el = document.getElementById('my-receipt');
-        console.log(el);
+        //console.log(el);
       },  [profileData]); 
   
     function downloadImage() {
